@@ -71,14 +71,6 @@ ul {
   background-color: var(--background-color);
 }
 
-/*Grid for pink side column*/
-.container aside.grid-aside {
-  grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 2;
-  background-color: var(--secondary-color);
-}
-
 /*Grid for footer*/
 .container footer.grid-footer {
   grid-column-start: 1;
@@ -108,50 +100,12 @@ ul {
      min-height: calc(100vh - 3em - 2em);
      background-color: var(--background-color);
   }
-  .container aside.grid-aside {
-     display: none;
-  }
   .container footer.grid-footer {
      grid-row-start: 4;
      grid-row-end: 4;
      grid-column-start: 1;
      grid-column-end: 3;
      height: 2rem;
-  }
-}
-
-/*To get nicer look for print out*/
-@media print {
-  .container {
-     height: 100vh;
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 3rem max-content 2rem;
-  }
-  .container header.grid-header {
-     grid-column-start: 1;
-     grid-row-start: 1;
-     height: 3rem;
-     background-color: var(--background-color);
-  }
-  .container main.grid-main {
-     grid-row-start: 2;
-     grid-column-start: 1;
-     grid-column-end: 1;
-     background-color: var(--background-color);
-  }
-  .container aside.grid-aside {
-     grid-row-start: 3;
-     grid-column-start: 1;
-     background-color: var(--background-color);
-  }
-  .container footer.grid-footer {
-     grid-row-start: 4;
-     grid-column-start: 1;
-     height: 2rem;
-  }
-  .header-button {
-     display: none;
   }
 }
 
@@ -170,14 +124,27 @@ ul {
   display: none;
 }
 
+#ham-menu {
+  display: none;
+}
+
 /*To show hamburger menu instead when regular menu becomes almost squished*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 2rem;
+  }
+  .main-heading {
+    text-align: center;
+  }
   #ham-menu {
      display: block;
      position: fixed;
      right: 1rem;
      top: 1rem;
      z-index: 1;
+  }
+  .fa-solid, fa-bars {
+    color: var(--secondary-color);
   }
   /*Look for drop down menu*/
   #navigation {
@@ -206,9 +173,7 @@ ul {
 /*When screen becomes smaller and pink side column dissapears,
 hamburger-menu becomes pink*/
 @media screen and (max-width: 600px) {
-  .fa-solid, fa-bars {
-     color: var(--secondary-color);
-  }
+
 }
 
 /*Look for a normal, unvisited link*/
@@ -270,23 +235,6 @@ a:active {
   #main-flex-img {
      height: 10rem;
   }
-}
-
-/*Center content in the pink side column*/
-#aside-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 95%;
-  width: 100%;
-}
-
-/*Id for the content in the pink side column*/
-#aside-flex-content {
-  height: min-content;
-  width: min-content;
-  color: var(--background-color);
-  font-size: 1rem;
 }
 
 /*Class for the general look when displaying a page and it's content*/
@@ -360,8 +308,13 @@ if screen is larger than 900px, info is presented in two columns*/
   box-shadow: 5px 5px 8px 8px lightgray;
 }
 
+.loading-icon {
+  margin-top: 50vh;
+  margin-left: 48vw;
+}
+
 /*When screen becomes smaller display cards in a column instead*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 550px) {
   .ul-portfolio {
      flex-direction: column;
   }
@@ -371,9 +324,10 @@ if screen is larger than 900px, info is presented in two columns*/
   }
 }
 
-/*Id for the show more checkboxes in the portfolio*/
-#show-more-toggle-n, #show-more-toggle-bn {
-  display: none;
+@media screen and (min-width: 900px) {
+  .project-card {
+    width: 30%;
+  }
 }
 
 /*Class to get space around the button in the card*/
@@ -390,6 +344,8 @@ if screen is larger than 900px, info is presented in two columns*/
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
   background-color: var(--background-color);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 1.5rem;
   border-radius: 15px;
   border: 1px solid lightgray;
@@ -405,13 +361,4 @@ if screen is larger than 900px, info is presented in two columns*/
   padding-left: 1.1rem;
   padding-right: 1.1rem;
   border: 1px solid var(--secondary-color);
-}
-
-/*To make the modal invisible when button not checked*/
-#show-more-toggle-n:not(:checked) ~ .more-info-modal {
-  display: none;
-}
-
-#show-more-toggle-bn:not(:checked) ~ .more-info-modal {
-  display: none;
 }
