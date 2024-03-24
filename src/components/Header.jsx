@@ -26,7 +26,7 @@ export default function Header() {
                 </nav>
                 <div id="ham-menu">
                     <label htmlFor="nav-toggle">
-                    <i className="fa-solid fa-bars" />
+                        <i className="fa-solid fa-bars" />
                     </label>
                 </div>
             </header>
