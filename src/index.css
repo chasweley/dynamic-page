@@ -124,11 +124,13 @@ ul {
   display: none;
 }
 
+/*Id for hamburger navigation menu*/
 #ham-menu {
   display: none;
 }
 
-/*To show hamburger menu instead when regular menu becomes almost squished*/
+/*To show hamburger menu instead when regular menu becomes almost squished,
+and slightly alter general look of app*/
 @media screen and (max-width: 600px) {
   body {
     padding-top: 2rem;
@@ -136,6 +138,7 @@ ul {
   .main-heading {
     text-align: center;
   }
+  /*Placement for hamburger menu*/
   #ham-menu {
      display: block;
      position: fixed;
@@ -168,12 +171,6 @@ ul {
      padding-top: 0.5rem;
      padding: 0.5rem;
   }
-}
-
-/*When screen becomes smaller and pink side column dissapears,
-hamburger-menu becomes pink*/
-@media screen and (max-width: 600px) {
-
 }
 
 /*Look for a normal, unvisited link*/
@@ -308,6 +305,7 @@ if screen is larger than 900px, info is presented in two columns*/
   box-shadow: 5px 5px 8px 8px lightgray;
 }
 
+/*Placement for loading icon*/
 .loading-icon {
   margin-top: 50vh;
   margin-left: 48vw;
@@ -324,6 +322,7 @@ if screen is larger than 900px, info is presented in two columns*/
   }
 }
 
+/*For larger screens three cards are displayed in a row*/
 @media screen and (min-width: 900px) {
   .project-card {
     width: 30%;

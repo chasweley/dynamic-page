@@ -11,6 +11,7 @@ export default function Resume() {
                     <h2>Work</h2>
                     <ol className="ol-resume">
                     {
+                        //Map to get info on work experience from json file
                         resumeData.work.map((work) => {
                             return (
                                 <li className="li-resume" key={work.id}>
@@ -31,6 +32,7 @@ export default function Resume() {
                     <h2>Education</h2>
                     <ol className="ol-resume">
                     {
+                        //Map to get info on education from json file
                         resumeData.education.map((edu) => {
                             return (
                                 <li className="li-resume" key={edu.id}>

@@ -1,9 +1,8 @@
-import React from 'react'
-
+//Function takes in bool and repo object to display more info on chosen repo
 const PortfolioModal = ({ setIsModalOpen, repo }) => {
     return (
         <>
-            <div className="dark-background" onClick={() => setIsModalOpen(false)} />
+            <div onClick={() => setIsModalOpen(false)} />
             <div className="more-info-modal">
                 <h2>{repo.name}</h2>
                 <p>{repo.description}</p>
