@@ -8,19 +8,19 @@ export default function Header() {
                     <input type="checkbox" id="nav-toggle" style={{ display: "none" }} />
                     <ul id="navigation">
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/dynamic-page/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about">About</NavLink>
+                            <NavLink to="/dynamic-page/about">About</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/resume">Resume</NavLink>
+                            <NavLink to="/dynamic-page/resume">Resume</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/portfolio">Portfolio</NavLink>
+                            <NavLink to="/dynamic-page/portfolio">Portfolio</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/contact">Contact</NavLink>
+                            <NavLink to="/dynamic-page/contact">Contact</NavLink>
                         </li>
                     </ul>
                 </nav>
