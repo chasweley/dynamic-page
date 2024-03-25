@@ -1,4 +1,4 @@
-import Headshot_CSL from "../../../public/images/Headshot_CSL.png"
+import Headshot_CSL from "/images/Headshot_CSL.png"
 
 export default function Home() {
     return (
