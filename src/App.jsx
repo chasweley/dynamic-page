@@ -10,14 +10,14 @@ import Contact from "./components/pages/Contact";
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/dynamic-page">
         <Header />
         <Routes>
-          <Route path="/dynamic-page/" element={<Home />} />
-          <Route path="/dynamic-page/about" element={<About />} />
-          <Route path="/dynamic-page/resume" element={<Resume />} />
-          <Route path="/dynamic-page/portfolio" element={<Portfolio />} />
-          <Route path="/dynamic-page/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
